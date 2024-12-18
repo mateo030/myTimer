@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myTimer</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="https://kit.fontawesome.com/492cd470a0.js" crossorigin="anonymous"></script>
+
+    <!-- GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="sideNav" class="sidenav">
+        <div class="sidenav-header">
+            <p>Settings</p>
+            <span class="sidenav-close">&times;</span>
+        </div>
+    </div>
+    <div class="header">
+        <div class="logo">
+            <h1>myTimer</h1>
+        </div>
+        <div class="nav">
+            <div class="settings">
+                <i class="fa-solid fa-gear" id="openNav"></i>
+            </div>
+        </div>
+    </div>
+    <div class="clock-card">
+        <div class="clock">
+            <h1 class="timer">00:00:00</h1>
+        </div>
+        <div class="buttons">
+            <div class="edit">
+                <button>Edit Timer</button>
+            </div>
+            <div class="reset">
+                <button class="reset">Reset</button>
+            </div>
+            <div>
+                <button class="stop">Stop</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Timer</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-time">
+                <div>
+                    <p>Hours</p>
+
+                    <select class="select" id="hours">
+                        
+                    </select>
+
+                </div>
+                <div>
+                    <p>Minutes</p>
+                    <select class="select" id="minutes">
+                        
+                    </select>
+                </div>
+                <div>
+                    <p>Seconds</p>
+                    <select class="select" id="seconds">
+                        
+                    </select>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="start">Start</button>
+                <button>Cancel</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <small>Copyright Mateo</small>
+    </footer>
+    <script src="script.js"></script>
+    <script src="clock.js"></script>
+</body>
+</html>

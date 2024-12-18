@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+
+i, p{
+    font-size: 20px;
+    color: #f1f1f1
+}
+
+i:hover {
+    cursor: pointer;
+}
+
+body {
+    background-color: #1a1a1a;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(61, 61, 61);
+    color: #f1f1f1;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #505050;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav-header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+.sidenav span {
+    font-size: 25px;
+    color: #818181;
+    transition: 0.3s;
+}
+
+.sidenav span:hover {
+    color: #f1f1f1;
+    cursor: pointer;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4em;
+    padding: 20px 30px;
+}
+
+.logo {
+    padding: 20px;
+}
+
+.clock-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    height: 85vh;
+}
+
+.clock {
+    color: rgb(226, 152, 16);
+}
+
+.clock h1 {
+    font-size: 78px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+button {
+    width: 90px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #636363;
+    margin: auto;
+    width: 40%;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    position: relative;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(61, 61, 61);
+    padding: 20px;
+}
+
+.modal-header h2 {
+    color: #f1f1f1;
+}
+
+.modal-time {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.modal-time p {
+    color: #f1f1f1;
+}
+
+select {
+    padding: 10px 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.close {
+    color: #aaaaaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #b9b9b9;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-content.closing {
+    animation-name: animateclose;
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards; 
+}
+
+footer {
+    text-align: center;
+}
+
+small{
+    color: #f1f1f1
+}
+
+@keyframes animatetop {
+    from {top: -50px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animateclose {
+    from {top: 0; opacity: 1;}
+    to {top: -50px; opacity: 0;}
+}
